@@ -26,16 +26,16 @@ public class Pagamento {
     @NotNull
     @Positive
     private BigDecimal valor;
-    @NotBlank
+
     @Size(max = 100)
     private String nome;
-    @NotBlank
+
     @Size(max = 19)
     private String numero;
-    @NotBlank
+
     @Size(max = 7)
     private String expiracao;
-    @NotBlank
+  
     @Size(min = 3, max = 3)
     private String codigo;
     @NotNull
@@ -44,6 +44,7 @@ public class Pagamento {
     @NotNull
     private Long pedidoId;
     @NotNull
+    @Column(name = "forma_de_pagamento_id")
     private Long formaPagamentoId;
 
 }
